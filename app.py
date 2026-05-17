@@ -21,9 +21,10 @@ def download():
     try:
 
         ydl_opts = {
-            'quiet': True,
-            'noplaylist': True,
-            'format': 'best'
+    'quiet': True,
+    'format': 'best',
+    'cookiefile': 'cookies.txt'
+}
         }
 
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
