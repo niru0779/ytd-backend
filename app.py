@@ -20,10 +20,21 @@ def download():
 
     try:
 
-        ydl_opts = {
+  ydl_opts = {
     'quiet': True,
     'format': 'best',
-    'cookiefile': 'cookies.txt'
+    'cookiefile': 'cookies.txt',
+
+    'extractor_args': {
+        'youtube': {
+            'player_client': ['android']
+        }
+    },
+
+    'http_headers': {
+        'User-Agent': 'Mozilla/5.0'
+    }
+
 }
         }
 
